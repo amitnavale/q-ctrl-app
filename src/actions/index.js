@@ -4,14 +4,14 @@ import {
   LOADING_CONTROLS,
 } from "../constants/action-types";
 
-export function getControls(payload) {
-  return { type: GET_CONTROLS, payload };
+export function getControls() {
+  return { type: GET_CONTROLS };
 }
 
-export function simulateError(payload) {
-  return { type: SIMMULATE_ERROR, payload };
+export function simulateError() {
+  return { type: SIMMULATE_ERROR };
 }
 
-export function loadingControls(payload) {
-  return { type: LOADING_CONTROLS, payload };
+export function loadingControls() {
+  return { type: LOADING_CONTROLS };
 }

@@ -38,7 +38,7 @@ export default function ErrorModal({ isOpen, onTryAgain }) {
   const handleClose = () => {
     onTryAgain();
     setOpen(false);
-    dispatch(getControls({}));
+    dispatch(getControls());
   };
 
   const handleTryAgain = () => {

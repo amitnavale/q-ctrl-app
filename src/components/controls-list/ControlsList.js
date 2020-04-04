@@ -26,13 +26,13 @@ function ControlsList() {
   // let intervalID;
   const intervalRef = useRef();
   useEffect(() => {
-    dispatch(loadingControls({}));
+    dispatch(loadingControls());
   }, [dispatch]);
 
   useEffect(() => {
     if (isLoading) {
       const intervalID = setTimeout(() => {
-        dispatch(getControls({}));
+        dispatch(getControls());
       }, LOADING_DELAY_IN_SECONDS * 1000);
 
       intervalRef.current = intervalID;
@@ -44,11 +44,11 @@ function ControlsList() {
   }, [isLoading, dispatch]);
 
   const onError = () => {
-    dispatch(simulateError({}));
+    dispatch(simulateError());
   };
 
   const onTryAgain = () => {
-    dispatch(loadingControls({}));
+    dispatch(loadingControls());
   };
   return (
     <>

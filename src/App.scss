@@ -26,4 +26,8 @@
       width: 100%;
     }
   }
+  .footer {
+    @include flex-row(flex-end, center, wrap);
+    color: $table-header-font-color;
+  }
 }

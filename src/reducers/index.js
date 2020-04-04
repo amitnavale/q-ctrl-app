@@ -5,7 +5,7 @@ import {
 } from "../constants/action-types";
 import { getControlsList } from "../middleware/api";
 
-const initialState = {
+export const initialState = {
   controls: undefined,
   isError: false,
   loading: false,

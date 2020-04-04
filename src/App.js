@@ -14,7 +14,7 @@ function App() {
         <main id="main" className="main-area">
           <ControlsList></ControlsList>
         </main>
-        <footer className="footer"></footer>
+        <footer className="footer">coding challenge</footer>
       </div>
     </div>
   );

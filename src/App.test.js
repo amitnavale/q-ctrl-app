@@ -1,9 +1,10 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import "./setupTests";
+import App from "./App";
+import { shallow } from "enzyme";
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test("app snapshot", () => {
+  const app = shallow(<App />);
+  expect(app).toMatchSnapshot();
+  expect(app.find(".main-area")).not.toEqual(null);
 });
