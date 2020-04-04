@@ -1,9 +1,18 @@
 ## Q-CTRL coding challange
 
+## Explenation
+
+- loading delay is simulated by a timer constant in file
+  src/constants/common-constants.js
+  LOADING_DELAY_IN_SECONDS = 2
+
+- to simulate error please click error button
+
 ## Assumption
 
 - Middleware - Redux -Saga is not in the scope of application
   - If yes - pelase rever I will update project and send the modified vesion with Redix and Saga
+- Pagination is not in scope
 
 ## TODO
 

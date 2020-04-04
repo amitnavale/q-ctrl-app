@@ -1,0 +1,27 @@
+@import "../../styles/base.scss";
+@import "../../styles/mixins/flex-align";
+@import "../../styles/mixins/breakpoints";
+
+.contianer {
+  @include flex-row(center, center, wrap);
+  text-align: center;
+  .error-title {
+    color: $table-header-font-color;
+    width: 100%;
+  }
+
+  .error-description {
+    width: 100%;
+    color: $primary-font-color;
+  }
+
+  .button-container {
+    width: 100%;
+    margin-top: 80px;
+  }
+
+  .btn-try-again {
+    background-color: $button-add-background;
+    color: $button-text-color;
+  }
+}
