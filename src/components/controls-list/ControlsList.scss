@@ -2,37 +2,78 @@
 @import "../../styles/mixins/flex-align";
 
 .title {
-  border: 1px solid red;
   @include flex-row(flex-start, center, wrap);
   height: 100px;
-  padding-left: 20px;
-
+  border-bottom: 1px solid $border-color;
   .title-text {
-    padding-left: 10px;
     margin-right: 15px;
     font-size: $page-header-label-font;
   }
 
   .title-action {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    background-color: $button-add-background;
-    font-size: 30px;
-    color: white;
-    padding: 0;
-    margin: 0;
     @include flex-row(center, center, initial);
+    .btn-add-control {
+      height: 40px;
+      width: 40px;
+      background-image: url("./../../assets/images/add-icon.png");
+      background-repeat: no-repeat;
+      background-color: #faf7fc;
+      border: none;
+      margin-top: 8px;
+    }
   }
 }
 
 .controls-list {
-  border: 1px solid red;
-
   .list-header {
-    border: 1px solid red;
+    border-bottom: 1px solid $border-color;
+    height: 30px;
+    @include flex-row(center, center, wrap);
+    color: $table-header-font-color;
+    font-size: $table-header-font;
   }
   .list-row {
-    border: 1px solid red;
+    border-bottom: 1px solid $border-color;
+    color: $primary-font-color;
+    @include flex-row(center, center, wrap);
+    background-color: $table-row-back-ground;
+    height: 60px;
+    .btn-type {
+      width: 50%;
+      background-color: $button-background-color;
+      color: $button-text-color;
+      border-radius: 2px;
+    }
+    .btn-more-container {
+      @include flex-row(flex-end, center, wrap);
+      .btn-more {
+        margin-right: 25px;
+        border: none;
+        color: $table-header-font-color;
+        font-size: 20px;
+        background-color: transparent;
+      }
+    }
+  }
+  .control-name-container {
+    width: 15%;
+    .control-name {
+      padding-left: 10px;
+    }
+    .control-title {
+      padding-left: 20px;
+    }
+  }
+  .control-type {
+    width: 15%;
+  }
+  .control-angle {
+    width: 15%;
+  }
+  .control-rate {
+    width: 15%;
+  }
+  .control-action {
+    width: 40%;
   }
 }
