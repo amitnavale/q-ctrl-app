@@ -1,3 +1,18 @@
+## Q-CTRL coding challange
+
+## Assumption
+
+- Middleware - Redux -Saga is not in the scope of application
+  - If yes - pelase rever I will update project and send the modified vesion with Redix and Saga
+
+## TODO
+
+# Optional List
+
+    - Accessibility checker in pipeline
+
+## Create React App Instructions
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

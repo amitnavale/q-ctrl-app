@@ -1,0 +1,22 @@
+@import "./styles/base.scss";
+@import "./styles/mixins/flex-align";
+
+.app {
+  background-color: $page-background;
+  @include flex-row(center, center, wrap);
+
+  .header {
+    @include flex-row(flex-start, center, wrap);
+    height: 100px;
+    width: 100%;
+    padding-left: 20px;
+    background-color: $body-background;
+    .logo {
+      height: 60px;
+    }
+  }
+  .content-area {
+    width: 80%;
+    background-color: $page-background;
+  }
+}

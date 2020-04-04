@@ -1,0 +1,22 @@
+@mixin flex-box($justify-content: null, $align-items: null, $flex-wrap: null) {
+    display: flex;
+    @if($justify-content) {
+        justify-content: $justify-content;
+    }
+    @if($align-items) {
+        align-items: $align-items;
+    }
+    @if($flex-wrap){
+        flex-wrap: $flex-wrap
+    }
+}
+
+@mixin flex-row($justify-content: null, $align-items: null, $flex-wrap: null) {
+    @include flex-box($justify-content,$align-items,$flex-wrap);
+    flex-direction: row;
+}
+
+@mixin flex-col($justify-content: null, $align-items: null, $flex-wrap: null) {
+    @include flex-box($justify-content,$align-items,$flex-wrap);
+    flex-direction: column;
+}

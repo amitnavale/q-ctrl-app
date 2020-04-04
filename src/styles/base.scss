@@ -1,0 +1,11 @@
+@import "./partials/index";
+@import "./mixins/breakpoints";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: $body-text;
+  font-family: $q-ctrl-font;
+  color: $primary-color;
+  background-color: $page-background;
+}
