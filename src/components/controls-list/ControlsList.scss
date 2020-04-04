@@ -1,5 +1,6 @@
 @import "../../styles/base.scss";
 @import "../../styles/mixins/flex-align";
+@import "../../styles/mixins/breakpoints";
 
 .title {
   @include flex-row(flex-start, center, wrap);
@@ -43,6 +44,12 @@
       background-color: $button-background-color;
       color: $button-text-color;
       border-radius: 2px;
+      text-overflow: ellipsis;
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      display: block;
+      text-overflow: ellipsis;
     }
     .btn-more-container {
       @include flex-row(flex-end, center, wrap);
@@ -52,6 +59,11 @@
         color: $table-header-font-color;
         font-size: 20px;
         background-color: transparent;
+      }
+    }
+    @include respond-below(mobile) {
+      .btn-type {
+        width: 90%;
       }
     }
   }
@@ -75,5 +87,22 @@
   }
   .control-action {
     width: 40%;
+  }
+  @include respond-below(mobile) {
+    .control-name-container {
+      width: 20%;
+    }
+    .control-type {
+      width: 20%;
+    }
+    .control-angle {
+      width: 20%;
+    }
+    .control-rate {
+      width: 20%;
+    }
+    .control-action {
+      width: 15%;
+    }
   }
 }

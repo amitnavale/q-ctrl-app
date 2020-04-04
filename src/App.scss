@@ -1,5 +1,6 @@
 @import "./styles/base.scss";
 @import "./styles/mixins/flex-align";
+@import "./styles/mixins/breakpoints";
 
 .app {
   background-color: $page-background;
@@ -19,5 +20,10 @@
   .content-area {
     width: 80%;
     background-color: $page-background;
+  }
+  @include respond-below(mobile) {
+    .content-area {
+      width: 100%;
+    }
   }
 }
