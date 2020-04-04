@@ -17,6 +17,8 @@
 ## TODO
 
 - Storybook
+- Improve unit test coverage
+- Test on IE
 
 # Optional List
 
