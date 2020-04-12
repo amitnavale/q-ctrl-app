@@ -1,0 +1,38 @@
+@import "../../styles/base.scss";
+@import "../../styles/mixins/flex-align";
+@import "../../styles/mixins/breakpoints";
+.list-row {
+  border-bottom: 1px solid $border-color;
+  color: $primary-font-color;
+  @include flex-row(center, center, wrap);
+  background-color: $table-row-back-ground;
+  height: 60px;
+  .btn-type {
+    width: 50%;
+    background-color: $button-background-color;
+    color: $button-text-color;
+    border-radius: 2px;
+    text-transform: uppercase;
+  }
+  .btn-more-container {
+    @include flex-row(flex-end, center, wrap);
+    .btn-more {
+      margin-right: 25px;
+      border: none;
+      color: $table-header-font-color;
+      font-size: 20px;
+      background-color: transparent;
+    }
+  }
+  @include respond-below(tablet) {
+    .btn-type {
+      width: 90%;
+      text-overflow: ellipsis;
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      display: block;
+      text-overflow: ellipsis;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@import "../../styles/base.scss";
+@import "../../styles/mixins/flex-align";
+@import "../../styles/mixins/breakpoints";
+
+.loader-container {
+  @include flex-row(center, center, wrap);
+  .loader {
+    height: 200px;
+  }
+}
+.title {
+  @include flex-row(flex-start, center, wrap);
+  height: 100px;
+  border-bottom: 1px solid $border-color;
+  .title-text {
+    margin-right: 15px;
+    font-size: $page-header-label-font;
+  }
+
+  .title-action {
+    @include flex-row(center, center, initial);
+    .btn-add-control {
+      height: 40px;
+      width: 40px;
+      background-image: url("./../../assets/images/add-icon.png");
+      background-repeat: no-repeat;
+      background-color: #faf7fc;
+      border: none;
+      margin-top: 8px;
+    }
+  }
+}
+
+.controls-list {
+  .list-header {
+    border-bottom: 1px solid $border-color;
+    height: 30px;
+    @include flex-row(center, center, wrap);
+    color: $table-header-font-color;
+    font-size: $table-header-font;
+  }
+
+  .control-name-container {
+    width: 15%;
+    .control-name {
+      padding-left: 10px;
+    }
+    .control-title {
+      padding-left: 20px;
+    }
+  }
+  .control-type {
+    width: 15%;
+  }
+  .control-angle {
+    width: 15%;
+  }
+  .control-rate {
+    width: 15%;
+  }
+  .control-action {
+    width: 40%;
+  }
+  @include respond-below(mobile) {
+    .control-name-container {
+      width: 20%;
+    }
+    .control-type {
+      width: 20%;
+    }
+    .control-angle {
+      width: 20%;
+    }
+    .control-rate {
+      width: 20%;
+    }
+    .control-action {
+      width: 15%;
+    }
+  }
+}

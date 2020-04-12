@@ -1,0 +1,33 @@
+@import "./styles/base.scss";
+@import "./styles/mixins/flex-align";
+@import "./styles/mixins/breakpoints";
+
+.app {
+  background-color: $page-background;
+  @include flex-row(center, center, wrap);
+
+  .header {
+    @include flex-row(flex-start, center, wrap);
+    height: 80px;
+    width: 100%;
+    background-color: $body-background;
+    .logo {
+      height: 60px;
+      padding-left: 20px;
+    }
+    color: $primary-font-color;
+  }
+  .content-area {
+    width: 80%;
+    background-color: $page-background;
+  }
+  @include respond-below(mobile) {
+    .content-area {
+      width: 100%;
+    }
+  }
+  .footer {
+    @include flex-row(flex-end, center, wrap);
+    color: $table-header-font-color;
+  }
+}
